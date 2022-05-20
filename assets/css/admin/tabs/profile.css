@@ -1,0 +1,61 @@
+
+.profile .avatar{
+    width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 50%;
+}
+
+@media screen and (max-width: 440px) {
+    .profile .avatar {
+            width: 200px;
+            height: 200px;
+    
+        }
+}
+
+
+
+
+.profile .avatar .cam {
+    cursor: pointer;
+    width: 50px;
+        height: 50px;
+        top: 80%;
+          left: 50%;
+          margin-left: -15px;
+            z-index: 3;
+            background-color: rgba(79, 79, 82, 0.411);
+            color:white;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+
+/* ADD STYLE FOR ACTIVE STATUS */
+.active_status .color-state{
+    width: 20px;
+        height: 20px;
+        border-radius: 50%;
+}
+
+/*  animation glow */
+@keyframes glow {
+    50% {
+        outline: 3px solid var(--light-gray);
+    }
+
+
+    100% {
+        outline: 6px solid var(--light-gray);
+    }
+}
+
+/* ADD ANIMATION IF THE USER IS ACTIVE   */
+.color-state.bg-info {
+    animation: glow 1.4s ease-out infinite;
+}
+

@@ -1,0 +1,74 @@
+/* app header */
+.app_header {
+    height: 80px;
+    background-color: white;
+    /* box-shadow: 0 2px 5px rgba(74, 74, 82, 0.11); */
+}
+
+/* logo img*/
+.app_header>.logo .img {
+    width: 90px;
+}
+
+/* user avatar */
+.app_navigation > .nav_controls>.avatar {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+
+/* user positions */
+.nav_controls > .position{
+    font-size: .7em;
+    margin-top: 5px;
+}
+
+
+/* app nofication */
+.app_navigation  .nofications{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+
+    position: relative;
+}
+
+/* nofication count*/
+.nofications > .notif_counter{
+    position: absolute;
+
+    top: -13%;
+    right: 0;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: .5em;
+    font-weight: bolder;
+    background-color: rgb(248, 28, 28);
+    color: white;
+}
+
+
+/* list of notification contents */
+.notification_list{
+    width: 300px;
+
+}
+
+/* add scroll bae to notifications if the theres to many */
+.notification_list > .list-group{
+        max-height: 450px;
+        overflow: auto;
+}
+
+/* add bg to all unread notifications */
+.dropdown-menu .list-group .list-group-item.is_read{
+background-color: var(--light-gray);
+}

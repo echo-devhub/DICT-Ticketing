@@ -1,0 +1,35 @@
+/* ...settings */
+
+/* agents avatar */
+.settings.agents .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+/* ...profile */
+/* .profile .avatar {
+    max-width: 360px;
+    height: auto;
+    border-radius: 50%;
+
+} */
+
+/* camera icon */
+/* .profile .cam {
+    right: 3%;
+    top: 8%;
+    border-radius: 50%;
+    background-color: rgba(252, 230, 191, 0.527);
+} */
+
+.settings.agents .active_status{
+font-size: .7em;
+}
+
+.settings.agents .active_status .color-state {
+    width: 15px;
+    height: 15px;
+}

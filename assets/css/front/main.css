@@ -1,0 +1,6 @@
+/* set the height of main container to min 90 viewport height */
+.wrapper>.app_main {
+    height: calc(100vh - 70px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}

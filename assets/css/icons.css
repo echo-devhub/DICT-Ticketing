@@ -1,0 +1,51 @@
+
+/* ... icon styles */
+
+/* trends */
+.fa-arrow-trend-up{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(50deg, rgb(248, 248, 137), rgb(55, 163, 226), rgb(248, 126, 126), rgb(228, 191, 123)); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* home */
+.fa-house{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray);
+}
+
+/* ticket */
+.fa-ticket-simple{
+    color: var(--orange);
+}
+
+
+/* pre define style for icon classes */
+
+.icon, .sm-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sm-icon {
+    width: 40px;
+    height: 40px;
+}

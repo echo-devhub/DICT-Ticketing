@@ -1,0 +1,11 @@
+/* ...color schemes */
+
+:root{
+    --blue:#0d6efd;
+    --light-green: #20c997;
+    --light-gray: rgba(74, 74, 82, 0.068);
+    --gray:rgba(74, 74, 82, 0.151);
+    --orange:rgb(243, 183, 73);
+    --dark: rgba(57, 57, 73, 0.973);
+    --green: #198754;
+}

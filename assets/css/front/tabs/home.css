@@ -1,0 +1,17 @@
+.introduction,.signin{
+    min-height: 550px;
+}
+
+
+.img-select{
+    bottom: 3%;
+    right: 3%;
+}
+
+.img-select > input[type=file]{
+    opacity: 0;
+}
+
+.img-close {
+
+}

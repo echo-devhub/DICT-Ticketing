@@ -1,0 +1,22 @@
+
+/*images */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* set heigth to the height of screen viewport and remove overflowing contents */
+html,
+body,
+.wrapper {
+    height: 100vh;
+    /* set default font family to poppins from [google fonts] */
+    font-family: Poppins;
+    overflow: hidden;
+}

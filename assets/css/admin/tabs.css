@@ -1,0 +1,21 @@
+
+/*...include individial css style for tabs */
+
+/* dashboard */
+@import url('./tabs/dashboard.css');
+
+
+/* tickets */
+@import url('./tabs/tickets.css');
+
+
+/* settings */
+@import url('./tabs/settings.css');
+
+
+/* messagings */
+@import url('./tabs/messaging.css');
+
+
+/* profile */
+@import url('./tabs/profile.css');

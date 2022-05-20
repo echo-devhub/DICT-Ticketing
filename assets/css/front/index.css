@@ -1,0 +1,27 @@
+:root{
+    --wrapper-margin: 90px;
+}
+
+
+/*images */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* set height to equal to view height and remove overrflowing contents */
+html,body,.wrapper{
+    height: 100vh;
+    font-family: Poppins;
+    overflow: hidden;
+}
+
+.text-justify {
+    text-align: justify;
+}

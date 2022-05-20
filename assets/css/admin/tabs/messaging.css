@@ -1,0 +1,256 @@
+/*  ...messenger interface */
+
+
+/* ..........top header */
+
+/* message reciever active indicator */
+.active_indicator {
+    width: 15px;
+    height: 15px;
+    top: -18%;
+    right: -6%;
+    border-radius: 50%;
+    z-index: 1;
+    /* background-color: var(--light-green); */
+    animation: glow 1.3s ease-out infinite;
+}
+
+
+/*  animation glow */
+@keyframes glow {
+    50% {
+        outline: 3px solid var(--light-gray);
+    }
+
+
+    100% {
+        outline: 6px solid var(--light-gray);
+    }
+}
+
+/* message reciever profile */
+.app_header .reciever-img .img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* make reciever date small font */
+.messenger > .date {
+    font-size: .7em;
+}
+
+
+/* ........sidebar */
+
+/* messaging left-sidebar */
+.messenger .messenger_sidebar {
+    overflow: auto;
+    width: 290px;
+}
+
+/* .. sidebar new message indicators*/
+.messenger_sidebar .new_message_indicator {
+    font-size: 0.5em;
+    background-color: rgb(238, 108, 108);
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+/* ........messages chat_content */
+
+/* add auto width base on sidebar width */
+.messenger .messenger_chat {
+    width: calc(100% - 270px);
+}
+
+/* set height */
+.messenger_chat .chat_content {
+    overflow: auto;
+    height: calc(100% - 65px);
+}
+
+/* messages lines content */
+.chat {
+    max-width: 80%;
+}
+
+/* date the message is send */
+.date_send {
+    font-size: .7em;
+}
+
+/* message sender small avatar|image container*/
+.chat_content .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+/* incomming messages - set backgounds and radius */
+.chat.incoming {
+    border-radius: 22px 15px 15px 8px;
+    background-color: rgba(44, 43, 43, 0.057);
+}
+
+/* outgoing messages - set backgounds and radius*/
+.chat.outgoing {
+    background-color: rgb(127, 119, 168);
+    color: white;
+    border-radius: 15px;
+}
+
+
+/* ........messages chat form field */
+
+/* form for sumiting message */
+.messenger_chat .chat_form {
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 65px;
+}
+
+
+/* upload file container */
+.upload-file {
+    width: 35px;
+    height: 35px;
+    right: 15px;
+    top: 50%;
+    margin-top: calc(-35px / 2);
+    border-radius: 50%;
+    background-color: rgba(80, 83, 88, 0.151);
+    overflow: hidden;
+}
+
+/* upload file set to opacity to 0 */
+.upload-file input[type=file] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+/* btn for sending message */
+.send_btn {
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+
+/* add place for image icon to right and remove the resize control*/
+.message-area textarea {
+    padding-right: 50px;
+    resize: none;
+}
+
+@media screen and (max-width: 992px) {
+    .messenger .messenger_sidebar {
+        /* position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: -100%; */
+
+        /* remove side bar starting from tablet screen or smalles */
+        display: none;
+    }
+    /* set width to 100% when the scrteen is equal or smalles than tablet screen */
+    .messenger .messenger_chat {
+        width: 100%;
+    }
+}
+
+
+
+/* add overflow: auto to the ticket-information */
+.ticket-information{
+    max-width: 490px;
+    height: 550px;
+    overflow: auto;
+
+}
+
+@media screen and (max-width:400px) {
+.ticket-information {
+        width: 100%;
+    }
+}
+
+
+
+.app_main.messenger-main{
+        height: calc(100vh - 60px);
+}
+
+
+/* messenger header */
+.app_header.messenger-header{
+height: 60px;
+}
+
+
+
+/* CHAT IMG */
+.chat_img{
+    max-width: 300px;
+}
+
+.chat_img img{
+    width: 100%;
+}
+
+/* agent at messenger */
+.messenger_chat .profile {
+    margin-bottom: 50px;
+}
+
+.messenger_chat .profile .photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+/* sidebar active link */
+.messenger_sidebar .active_link{
+    background-color: rgba(80, 83, 88, 0.082);
+}
+/* image preview */
+.chat_form .img_preview {
+    width: 100%;
+    height: 100px;
+    top: 0%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -50px;
+
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(23, 25, 29, 0.548);
+}
+
+.chat_form .img_preview img {
+    display: block;
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: auto;
+    border: 1px solid black;
+}

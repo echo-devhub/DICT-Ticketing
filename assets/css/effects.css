@@ -1,0 +1,24 @@
+/* ...visual screen effect */
+
+
+/* --front | page effects */
+
+/* home */
+
+.visual-effect {
+    position: absolute;
+    width: 200%;
+    height: 600px;
+    z-index: -1;
+    background-color: rgba(155, 220, 236, 0.466);
+    transform: rotate(-10deg);
+    top: -50%;
+    left: -30%;
+}
+
+/* visual effects for creating a ticket */
+.create-ticket .visual-effect {
+    top: -30%;
+    transform: rotate(20deg);
+}
+

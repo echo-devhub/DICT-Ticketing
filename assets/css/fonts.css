@@ -1,0 +1,17 @@
+/* ...font families */
+
+@font-face {
+    font-family: headlines;
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+:root{
+    --headline:headlines;
+    --poppins: Poppins;
+}
+

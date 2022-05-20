@@ -1,0 +1,5 @@
+<?php
+
+$dashboard = new Dashboard();
+
+

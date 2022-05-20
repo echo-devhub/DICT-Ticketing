@@ -1,0 +1,28 @@
+/* ...tickets */
+
+/* filter links */
+.ticket_status>.link_status {
+    background-color: var(--light-gray);
+    border-radius: 16px;
+    border: .5px solid var(--light-gray);
+}
+
+/* add bg to active state */
+.link_status.active_link {
+    background-color: var(--gray);
+}
+
+/* tables action links */
+.table .table_action_link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+}
+
+#modal_agent_list .avatar{
+   width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
