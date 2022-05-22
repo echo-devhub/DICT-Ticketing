@@ -53,7 +53,7 @@
                 <!-- intro message -->
                 <div class="col-md d-flex justify-content-center align-items-center my-3">
                     <div class="help_text d-flex flex-column">
-                        <h1 class="display-5 text-center text-md-end fw-bolder text-secondary">Sign in to MISS</h1>
+                        <h1 class="display-5 text-center text-md-end fw-bolder text-secondary"><i class="fa-solid fa-user mx-1"></i> Sign in to MISS</h1>
                         <hr>
                         <p class="text-md-end text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ipsa earum suscipit ad
                             blanditiis a tempora at

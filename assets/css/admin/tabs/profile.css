@@ -28,7 +28,7 @@
             background-color: rgba(79, 79, 82, 0.411);
             color:white;
 
-
+    border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -59,3 +59,10 @@
     animation: glow 1.4s ease-out infinite;
 }
 
+#form_change_photo .img_preview{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}

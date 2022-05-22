@@ -35,6 +35,7 @@ const formAssignAgent = document.querySelectorAll('.form_assign_agent').forEach(
         const formdata = new FormData(this);
 
         formdata.set('ticket_number', ticketNumber);
+        formdata.set('ticket_assigner', currentUserId);
 
 
         let res = await fetch(`./controllers/ajax_assign_agents.php?assign_agents`, {

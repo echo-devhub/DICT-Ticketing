@@ -18,6 +18,9 @@ const chats = document.querySelector('.chat_content');
     const chat_form = document.querySelector('.chat_form ');
 
 
+const btnSend = document.querySelector('.send_btn');
+
+
 // PREVIEW IMAGE
 inputFile.addEventListener('change', function () {
     let file = this.files[0];
@@ -30,16 +33,24 @@ inputFile.addEventListener('change', function () {
 
         let div = document.createElement('div');
         div.classList.add('img_preview','position-absolute');
-        const img = document.createElement('img');
-        img.src = reader.result;
+        // const img = document.createElement('img');
+        // img.src = reader.result;
+
+       let img = `<img src="${reader.result}" alt="">`
+
         div.appendChild(img);
         chat_form.appendChild(div);
+
+
+        // ENABLE BTN SUBMIT
+          btnSend.classList.add('bg-primary')
+        btnSend.classList.remove('bg-secondary')
+    btnSend.removeAttribute('disabled');
 
     });
 });
 
 
-const btnSend = document.querySelector('.send_btn');
 
 function disableBtn(inputText) {
     if (!inputText.value) {

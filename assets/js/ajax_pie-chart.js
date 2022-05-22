@@ -11,10 +11,10 @@ function generateChart(canvas, label, chartType, entries) {
     label: label,
     data: statusCounts,
     backgroundColor: [
-      'rgb(255, 99, 132)',
+      'rgb(246, 67, 109)',
       'rgb(54, 162, 235)',
-      'rgb(29, 191, 58)',
-      'rgb(88, 88, 102)'
+      'rgb(49, 182, 80)',
+      'rgb(90, 96, 100)'
     ],
     hoverOffset: 4
   }]

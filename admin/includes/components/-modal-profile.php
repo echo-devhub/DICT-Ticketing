@@ -38,7 +38,7 @@
 
 <!-- update photo -->
 <div class="modal fade" id="modal_change_photo">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h6 class="modal-title">Change photo</h6>
@@ -55,10 +55,10 @@
                         <input type="file" name="photo" id="photo" class="form-control d-none">
                     </div>
 
-                    <div class="img_preview"></div>
+                    <div class="img_preview mb-5"></div>
 
                     <div class="field d-grid mt-1">
-                        <button type="submit" class="btn btn-secondary d-block">Change now</button>
+                        <button type="submit" class="btn btn-dark d-block">Change now</button>
                     </div>
                 </form>
             </div>

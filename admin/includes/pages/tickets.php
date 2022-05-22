@@ -1,15 +1,15 @@
  <?php include APP_ADMIN_INCLUDE_COMPONENT . '/-modal-agent-list.php'; ?>
 
- <section class="ticket tabs container h-100">
+ <section class="ticket tabs h-100">
 
      <!-- tab title -->
-     <h4 class="main_title p-3 fw-bold">Tickets</h4>
+     <h4 class="main_title p-3 fw-bold container text-primary">Tickets</h4>
 
      <!-- content -->
      <div class="main_content">
 
          <!-- /header -->
-         <div class="search">
+         <div class="search container">
              <!-- search form -->
              <form action="" method="get">
                  <div class="field">
@@ -30,7 +30,7 @@
          </div>
 
          <!-- filter tickets -->
-         <div class="ticket_status d-flex justify-content-md-end justify-content-center align-items-center alert flex-wrap">
+         <div class="ticket_status d-flex justify-content-md-end justify-content-center align-items-center alert flex-wrap container">
              <?php $tk_statuses = $tickets->get_ticket_statuses(); ?>
 
              <?php if (count($tk_statuses) > 0) : ?>
@@ -38,9 +38,9 @@
                      <!--  ticket link-->
 
                      <?php if ($status_id && $status['status_id'] == $status_id) : ?>
-                         <a href="?status_id=<?php echo $status['status_id']; ?>" class="link_status text-decoration-none p-2 px-3 open text-primary m-1 text-white bg-primary"><?php echo $status['status']; ?></a>
+                         <a href="?status_id=<?php echo $status['status_id']; ?>" class="link_status text-decoration-none p-2 px-3 m-1 status-<?php echo $status['status']; ?> active_link shadow text-secondary"><?php echo $status['status']; ?></a>
                      <?php else : ?>
-                         <a href="?status_id=<?php echo $status['status_id']; ?>" class="link_status text-decoration-none p-2 px-3 open text-primary m-1"><?php echo $status['status']; ?></a>
+                         <a href="?status_id=<?php echo $status['status_id']; ?>" class="link_status text-decoration-none p-2 px-3 m-1 status-<?php echo $status['status']; ?>"><?php echo $status['status']; ?></a>
                      <?php endif; ?>
 
                  <?php endforeach; ?>
@@ -56,14 +56,14 @@
                 ?>
 
              <?php else : ?>
-                 <div class="table-responsive">
+                 <div class="table-responsive px-2">
 
 
                      <?php $allTickets = $logUser->is_admin() ? $tickets->all_tickets() : $tickets->users_assigned_tickets($currentUser['agent_id']); ?>
 
                      <?php if (count($allTickets) > 0) : ?>
 
-                         <table class="table align-middle">
+                         <table class="table align-middle table-borderless table-hover table-striped">
                              <thead>
                                  <tr>
                                      <th>#Ticket Number</th>
@@ -121,7 +121,7 @@
                          </table>
 
                      <?php else : ?>
-                         <div class="alert alert-info">No tickets</div>
+                         <div class="alert alert-info mx-2">No tickets</div>
                      <?php endif; ?>
 
                  </div>

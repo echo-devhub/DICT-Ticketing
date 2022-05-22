@@ -11,3 +11,4 @@ menu_bar.addEventListener('click', function () {
     app_nav.classList.toggle('toggle');
     
 });
+

@@ -25,11 +25,11 @@ if (isset($_REQUEST['chats'])) {
     $output .= '';
 
     echo '<div class="profile">
-        <div class="photo">
+        <div class="photo mb-3">
             <img src="../../assets/media/photos/uploaded/' . $agent['photo'] . '" alt="">
         </div>
 
-        <h6 class="text-center">' . $agent['first_name'] . ' ' . $agent['last_name'] . '</h6>
+        <h6 class="text-center display-4">' . $agent['first_name'] . ' ' . $agent['last_name'] . '</h6>
         <h6 class="text-center">' . $agent['user_role'] . '</h6>
     </div>';
 
@@ -39,7 +39,7 @@ if (isset($_REQUEST['chats'])) {
 
     else :
         $output .= '<div class="alert">
-    <h1 class="display-3 text-center text-secondary">No conversation <i class="fa-solid fa-comment-dots text-primary"></i></h1>
+    <h1 class="display-6 text-center text-secondary">No conversation <i class="fa-solid fa-comment-dots text-primary"></i></h1>
 </div>';
 
 

@@ -3,7 +3,7 @@
     <!-- app logo -->
     <div class="d-flex align-items-center">
         <a href="./tickets.php" class="text-decoration-none me-2">
-            <i class="fa-solid fa-power-off icon fa-lg text-danger"></i>
+            <i class="fa-solid fa-power-off icon sm-icon fa-lg text-danger"></i>
         </a>
 
         <h5 class="mb-0"><?php echo $ticket_information['full_name']; ?></h5>
@@ -15,7 +15,7 @@
         <div class="ticket-info">
             <!-- notification bell -->
             <div class="me-1 d-flex justify-content-center align-items-center dropstart" data-bs-toggle="dropdown" data-bs-auto-close="false">
-                <i class="fa-solid fa-circle-info fa-lg icon text-primary"></i>
+                <i class="fa-solid fa-circle-info fa-lg icon sm-icon text-primary"></i>
                 <!-- <i class="fa-solid fa-gears sm-icon fa-lg"></i> -->
             </div>
 
@@ -109,8 +109,8 @@
 
         </div>
 
-        <div class="d-flex d-lg-none">
-            <i class="fa-solid fa-list-check icon fa-lg"></i>
+        <div class="d-flex d-lg-none" id="msg_list">
+            <i class="fa-solid fa-list-check icon sm-icon fa-lg"></i>
         </div>
     </div>
 

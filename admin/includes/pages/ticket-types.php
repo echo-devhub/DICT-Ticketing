@@ -5,7 +5,7 @@
 
      <!-- tab title -->
      <div class="main_title p-3 fw-bold d-flex justify-content-between align-items-center">
-         <span>Settings | Ticket subject</span>
+         <span class="text-primary">Settings | Ticket subject</span>
          <i class="fa-solid fa-circle-plus fs-3 icon text-primary" data-bs-toggle="modal" data-bs-target="#add_modal_ticket_subject"></i>
      </div>
 
@@ -17,7 +17,7 @@
          <?php if (count($categories)) : ?>
              <!-- table record -->
              <div class="table-responsive">
-                 <table class="table align-middle">
+                 <table class="table align-middle table-borderless table-hover">
                      <thead>
                          <tr>
                              <th>#ID</th>

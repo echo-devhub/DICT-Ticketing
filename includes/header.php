@@ -8,14 +8,19 @@
     <title>DICT | Home</title>
 
     <!-- fontawesone -->
-    <link rel="stylesheet" href="<?php echo APP_ASSET_ICON . '/css/all.css'; ?>">
+    <link rel="stylesheet" href="<?php echo APP_ASSET_ICON . '/css/all.css';
+                                    ?>">
 
 
     <!-- bootstrap css | minified-->
-    <link rel="stylesheet" href="<?php echo APP_ASSET_BOOTSTRAP . '/css/bootstrap.min.css'; ?>">
+    <link rel="stylesheet" href="<?php echo APP_ASSET_BOOTSTRAP . '/css/bootstrap.min.css';
+                                    ?>">
 
     <!-- custome styles -->
-    <link rel="stylesheet" href="<?php echo APP_ASSET_CSS . '/front/app.css'; ?>">
+    <link rel="stylesheet" href="<?php echo APP_ASSET_CSS . '/front/app.css';
+                                    ?>">
+
+
 </head>
 
 <body>

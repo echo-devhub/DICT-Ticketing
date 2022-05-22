@@ -110,6 +110,13 @@ class Database
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC)['total'];
     }
 
+    public function entity_sum($table)
+    {
+        $sql = "SELECT COUNT(*) as total FROM $table";
+        return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC)['total'];
+    }
+
+
 
     public function get_col_by_id($columnName, $id, $table)
     {

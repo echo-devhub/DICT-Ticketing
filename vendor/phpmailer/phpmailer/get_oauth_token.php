@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 /**
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5.5
@@ -48,10 +45,10 @@ use Hayageek\OAuth2\Client\Provider\Yahoo;
 //@see https://github.com/stevenmaguire/oauth2-microsoft
 use Stevenmaguire\OAuth2\Client\Provider\Microsoft;
 
-
 $redirectUri = 'http://localhost/ticketing/vendor/phpmailer/phpmailer/get_oauth_token.php';
 $clientId = '764910740809-t9j5r25a22ao3l3bqguf6r0j8ph4gah3.apps.googleusercontent.com';
 $clientSecret = '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';
+
 
 if (!isset($_GET['code']) && !isset($_GET['provider'])) {
 ?>
@@ -68,12 +65,12 @@ if (!isset($_GET['code']) && !isset($_GET['provider'])) {
     exit;
 }
 
-require __DIR__ . '/../../autoload.php';
+
+
+
+require __DIR__ . '/../../../vendor/autoload.php';
 
 session_start();
-
-
-
 
 $providerName = '';
 
@@ -89,12 +86,14 @@ if (!in_array($providerName, ['Google', 'Microsoft', 'Yahoo'])) {
 
 //These details are obtained by setting up an app in the Google developer console,
 //or whichever provider you're using.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+$clientId = '764910740809-t9j5r25a22ao3l3bqguf6r0j8ph4gah3.apps.googleusercontent.com';
+$clientSecret = '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';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
-$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-//$redirectUri = 'http://localhost/PHPMailer/redirect';
+// $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+// $redirectUri = 'http://localhost/PHPMailer/redirect';
+$redirectUri = 'http://localhost/ticketing/vendor/phpmailer/phpmailer/get_oauth_token.php';
+$refreshToken = '1//0eEwgW23hCG-gCgYIARAAGA4SNwF-L9Irf7JTnZHKoK_ST44I7r4szWADX2i144yfYYtvjkwWRbB7_J4vFh7bQtKRChjXpN61qQE';
 
 $params = [
     'clientId' => $clientId,

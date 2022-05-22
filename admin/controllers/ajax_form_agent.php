@@ -10,11 +10,12 @@ $first_name = $agent->post('first_name');
 $last_name = $agent->post('last_name');
 $email_address = $agent->post('email_address');
 $user_role = $agent->post('user_role');
-$pwd = $agent->post('pwd');
+// $pwd = $agent->post('pwd');
+
 $upload = $agent->uploads('photo');
 
 
-if (!$first_name || !$last_name || !$email_address || !$user_role || !$pwd || !$upload) {
+if (!$first_name || !$last_name || !$email_address || !$user_role || !$upload) {
 
     echo 'All fields is required';
     return;
@@ -30,10 +31,15 @@ if ($agent->is_agent_exist($email_address)) {
     return;
 }
 
-if (!validPasswordLeng($pwd)) {
-    echo 'Password must be 8 characters long';
+if ($agent->is_admin_full() && $user_role === 'Administrator') {
+    echo 'Administrator role is now full';
     return;
 }
+
+// if (!validPasswordLeng($pwd)) {
+//     echo 'Password must be 8 characters long';
+//     return;
+// }
 
 
 if (!is_uploaded_file($upload['tmp_name']) && $upload['error'] !== 0) {
@@ -79,6 +85,9 @@ if (!$upload_ready) {
     return;
 }
 
+// GENERATE RANDOM PASSWORD
+$pwd = randomPassword();
+
 
 if ($agent->add_new_agent([
     'first_name' => $first_name,
@@ -88,6 +97,21 @@ if ($agent->add_new_agent([
     'pwd' => $pwd,
     'photo' => $upload_ready,
 ])) {
+
+    $msg = "Hi {$first_name} {$last_name} \r\n \r\n";
+    $msg .= "This is your Login credential to MISS SUPPORT SYSTEM please dont share this to others. Thank you.\r\n\r\n";
+    $msg .= "Username: {$email_address}\r\n";
+
+    // SEND RANDOM PASSWORD
+    $msg .= "Password: {$pwd} \r\n";
+    $link = 'http://localhost/ticketing';
+    $msg .= "Please follow this link to login:\n{$link}";
+
+    // SEND EMAIL FOR CREDENTIALS
+    if (!send_email($email_address, 'MISS - Login Credential', $msg)) {
+        echo 'Something is wrong please try again';
+        return;
+    }
 
     echo 'SUCCESS';
     return;

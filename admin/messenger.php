@@ -28,7 +28,7 @@
 </div>
 
 <script src="<?php echo APP_ASSET_JS . '/ajax_chat.js'; ?>"></script>
-
+<script src="<?php echo APP_ASSET_JS . '/toggle-messenger-sidebar.js'; ?>"></script>
 
 <!-- footer -->
 <?php include APP_ADMIN_INCLUDE . '/footer.php'; ?>

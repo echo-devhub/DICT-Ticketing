@@ -1,12 +1,12 @@
 <?php if (!is_null($term)) : ?>
 
-    <div class="table-responsive">
+    <div class="table-responsive px-2">
         <?php $allTickets = $logUser->is_admin() ? $tickets->search_tickets($term) : $tickets->agent_search_ticket($term); ?>
 
         <?php if (count($allTickets) > 0) : ?>
 
 
-            <table class="table align-middle">
+            <table class="table align-middle table-hover table-striped table-borderless">
                 <thead>
                     <tr>
                         <th>#Ticket Number</th>
@@ -65,11 +65,11 @@
             </table>
 
         <?php else : ?>
-            <div class="alert alert-info d-flex align-items-center">No tickets found <code class="fs-4 ms-2"><?php echo $term; ?></code></div>
+            <div class="alert alert-info d-flex align-items-center mx-2">No tickets found <code class="fs-4 ms-2"><?php echo $term; ?></code></div>
         <?php endif; ?>
     </div>
 
 
 <?php else : ?>
-    <div class="alert alert-info">please enter ticket number</div>
+    <div class="alert alert-info mx-2">please enter ticket number</div>
 <?php endif; ?>

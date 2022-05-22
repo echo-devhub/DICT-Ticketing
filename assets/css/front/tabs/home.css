@@ -12,6 +12,8 @@
     opacity: 0;
 }
 
-.img-close {
 
+.create-ticket #img_preview{
+    max-width: 200px;
+    margin: auto;
 }

@@ -8,8 +8,8 @@
     <!-- app nav -->
     <nav class="app_navigation nav nav-pills flex-column flex-md-row align-items-md-center">
         <!-- <a href="#" class="nav-link">ICT Equipment</a> -->
-        <a href="./index.php" class="nav-link link-secondary active_link"><i class="fa-solid fa-house"></i></a>
-        <a href="./create-new-ticket.php" class="nav-link link-secondary">New Ticket</a>
+        <a href="./index.php?source=home" class="nav-link link-secondary"><i class="fa-solid fa-house"></i></a>
+        <a href="./create-new-ticket.php?source=create-ticket" class="nav-link link-secondary">New Ticket</a>
     </nav>
 
     <!-- burger menu -->

@@ -10,7 +10,7 @@ class Agent extends Database
 
     public function add_new_agent($params)
     {
-        $sql = "INSERT INTO {$this->table()} (first_name, last_name, email_address, user_role, photo, pwd) VALUES (:first_name, :last_name, :email_address, :user_role, :photo, :pwd)";
+        $sql = "INSERT INTO {$this->table()} (first_name, last_name, email_address, user_role, pwd, photo) VALUES (:first_name, :last_name, :email_address, :user_role, :pwd, :photo)";
         return  $this->prepare($sql, $params);
     }
 
@@ -21,6 +21,13 @@ class Agent extends Database
         return $this->is_row_exist('email_address', $email);
     }
 
+    public function all_admin()
+    {
+        $sql = "SELECT * FROM agents WHERE user_role = 'Administrator'";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 
     public function agents($email)
@@ -69,5 +76,25 @@ class Agent extends Database
     public function get_agent_by_id($id)
     {
         return $this->get_col_by_id('agent_id', $id, 'agents');
+    }
+
+    public function is_admin_full()
+    {
+        $sql = "SELECT COUNT(email_address) total_admin FROM agents WHERE user_role = 'Administrator'";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+        if ($stmt->fetch(PDO::FETCH_ASSOC)['total_admin'] >= 3) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public function col_real_value($col, $id, $colName, $table)
+    {
+        $customer = $this->get_col_by_id($col, $id, $table);
+        return $customer[$colName] ?? null;
     }
 }

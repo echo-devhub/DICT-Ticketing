@@ -121,7 +121,8 @@ function displayHtml(users) {
                              ${user.is_active ? 'Active Now' : 'Offline'} 
                         </small>
                                  </h5>
-                                <small>Joined on ${user.joined_at}</small>
+                                  <h6>${user.user_role}</h6>
+                                <small class="fst-italic text-secondary"><i class="fa-regular fa-calendar text-warning"></i> Date joined ${user.joined_at}</small>
                             </div>
                         </a>
                     </div>

@@ -94,10 +94,25 @@ if (isset($_REQUEST['create_ticket'])) {
         $newTicket[':photo']  = $photo_url;
     }
 
-    $ticket->new_ticket($newTicket);
+    $agent = new Agent();
 
+    // SEND EMAIL 
+    $administators = $agent->all_admin();
+
+
+    $ticket->new_ticket($newTicket);
 
     // send success response
     echo 'SUCCESS';
+
+    foreach ($administators as $admin) {
+
+        $msg = "Hi {$admin['first_name']} {$admin['last_name']}! \r\n\r\n";
+        $prtyLevel = $agent->col_real_value('priority_id', $priority, 'priority', 'ticket_priorities');
+        $msg .= "Customer <{$name}> issue a new ticket with a [{$prtyLevel}] priority level.";
+
+        send_email($admin['email_address'], 'MISS SUPPORT SYSTEM | New Ticket', $msg);
+    }
+
     return;
 }

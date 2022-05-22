@@ -160,15 +160,26 @@
 
 @media screen and (max-width: 992px) {
     .messenger .messenger_sidebar {
-        /* position: fixed;
+        position: fixed;
         height: 100%;
         width: 100%;
-        top: 0;
-        left: -100%; */
+        z-index: 3;
+        top: 60px;
+        left: 0%;
+        /* background-color: rgb(127, 119, 168); */
+        background-color: white;
+
+        transform: translateX(-120%);
+        transition: 500ms transform ease-out;
 
         /* remove side bar starting from tablet screen or smalles */
-        display: none;
+        /* display: none; */
     }
+
+.messenger .messenger_sidebar.active{
+  transform: translateX(0);
+}
+    
     /* set width to 100% when the scrteen is equal or smalles than tablet screen */
     .messenger .messenger_chat {
         width: 100%;

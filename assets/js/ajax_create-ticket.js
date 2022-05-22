@@ -5,6 +5,9 @@ const formTicket = document.querySelector('#form_create_ticket');
 const responseMessage = document.querySelector('#response_message');
 
 
+// btn send
+const btnSendTicket = formTicket.querySelector('button[type=submit]');
+
 formTicket.addEventListener('submit', async function (ev) {
     ev.preventDefault();
 
@@ -24,7 +27,11 @@ formTicket.addEventListener('submit', async function (ev) {
 
 
         if (result == 'SUCCESS') {
-            CreateTicketResponse('Ticket succesfully created', 'info');
+
+            // btnSendTicket.textContent = 'Please wait...';
+            // btnSendTicket.setAttribute('');
+
+            CreateTicketResponse('Ticket succesfully created. The system will send you a code that you can used to open your ticket once its approved.', 'info');
             this.reset();
             imgPreview.innerHTML = '';
         } else {

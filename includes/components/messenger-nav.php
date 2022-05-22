@@ -16,7 +16,7 @@
         <div class="ticket-info">
             <!-- notification bell -->
             <div class="me-1 d-flex justify-content-center align-items-center dropstart" data-bs-toggle="dropdown" data-bs-auto-close="false">
-                <i class="fa-solid fa-circle-info fa-lg icon text-primary"></i>
+                <i class="fa-solid fa-circle-info fa-lg icon sm-icon text-primary"></i>
             </div>
 
             <!-- list of notifications -->
@@ -98,7 +98,7 @@
 
 
         <a href="../../signout.php" class="text-decoration-none me-2">
-            <i class="fa-solid fa-power-off fa-lg icon text-danger"></i>
+            <i class="fa-solid fa-power-off fa-lg icon sm-icon text-danger"></i>
         </a>
     </div>
 

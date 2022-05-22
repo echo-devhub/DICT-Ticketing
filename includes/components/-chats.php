@@ -63,7 +63,7 @@
                      </div>
                  </div>
                  <div class="text-center p-1">
-                     <small class="date_send"><?php echo $chat['send_date']; ?>
+                     <small class="date_send"><?php echo date('l, F d, Y', strtotime($chat['send_date'])); ?>
                          <i class="fa-solid fa-circle-check text-primary"></i></small>
                  </div>
              </div>
@@ -81,7 +81,7 @@
                      </div>
                  </div>
                  <div class="text-center p-1">
-                     <small class="date_send"><?php echo $chat['send_date']; ?>
+                     <small class="date_send"><?php echo date('l, F d, Y', strtotime($chat['send_date'])); ?>
                          <i class="fa-solid fa-circle-check text-primary"></i></small>
                  </div>
              </div>
@@ -96,7 +96,7 @@
                      </div>
                  </div>
                  <div class="text-center p-1">
-                     <small class="date_send"><?php echo $chat['send_date']; ?>
+                     <small class="date_send"><?php echo date('l, F d, Y', strtotime($chat['send_date'])); ?>
                          <i class="fa-solid fa-circle-check text-primary"></i></small>
                  </div>
              </div>

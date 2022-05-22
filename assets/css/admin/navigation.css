@@ -1,6 +1,6 @@
 /* app header */
 .app_header {
-    height: 80px;
+    height: 70px;
     background-color: white;
     /* box-shadow: 0 2px 5px rgba(74, 74, 82, 0.11); */
 }
@@ -12,8 +12,8 @@
 
 /* user avatar */
 .app_navigation > .nav_controls>.avatar {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     overflow: hidden;
     cursor: pointer;
     border-radius: 50%;

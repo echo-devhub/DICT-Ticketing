@@ -45,10 +45,10 @@
 
 
                      <!--password -->
-                     <div class="field mb-3 required">
+                     <!-- <div class="field mb-3 required">
                          <label for="pwd" class="form-label"></i>Create password</label>
                          <input type="password" name="pwd" id="pwd" value="" class="form-control">
-                     </div>
+                     </div> -->
 
 
                      <!-- photo -->

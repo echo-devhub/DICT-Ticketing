@@ -117,6 +117,11 @@ if (isset($_REQUEST['request_change_role'])) {
         return;
     }
 
+    if ($agent->is_admin_full() && $role === 'Administrator') {
+        echo 'Administrator role is now full';
+        return;
+    }
+
 
     $agent->change_system_role($_REQUEST['request_change_role'], $role);
 

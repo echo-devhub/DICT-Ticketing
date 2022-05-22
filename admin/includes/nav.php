@@ -1,5 +1,5 @@
  <!-- header -->
- <header class="app_header d-flex justify-content-between align-items-center px-3 px-sm-5 border-bottom">
+ <header class="app_header d-flex justify-content-between align-items-center px-3 px-sm-5 shadow-sm">
      <!-- app logo -->
      <div class="logo d-flex justify-content-center align-items-center">
          <a href="#" class="me-1">
@@ -7,7 +7,6 @@
              <img src="<?php echo APP_ASSET_PHOTO_BUILT . '/DICT-logo.png'; ?>" alt="" class="img">
          </a>
          <!-- title -->
-         <span>| Help Desk</span>
      </div>
 
      <!-- app nav -->
@@ -37,7 +36,7 @@
              <!-- drowpdown menu -->
              <ul class="dropdown-menu shadow border-0">
                  <li>
-                     <a class="dropdown-item py-2 d-flex justify-content-between align-items-center" href="./index.php">Dashboard <i class="fa-solid fa-house"></i></a>
+                     <a class="dropdown-item py-2 d-flex justify-content-between align-items-center" href="./index.php">Dashboard <i class="fa-solid fa-house sm-fa-house"></i></a>
                  </li>
                  <li>
                      <a class="dropdown-item py-2 d-flex justify-content-between align-items-center" href="./tickets.php">Tickets <i class="fa-solid fa-ticket-simple"></i></a>

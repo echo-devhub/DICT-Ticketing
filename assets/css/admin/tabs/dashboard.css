@@ -29,3 +29,30 @@
         height: 200px;
     }
 }
+
+/*style ticket color codes */
+.tk_status {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 8px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-Open {
+    background-color: rgb(246, 67, 109);
+}
+
+.status-Pending {
+    background-color: rgb(54, 162, 235);
+}
+
+.status-Resolved {
+    background-color: rgb(49, 182, 80);
+}
+
+.status-Closed {
+    background-color: rgb(90, 96, 100);
+}

@@ -57,6 +57,12 @@ align-items: center;
 border-radius: 50%;
 }
 
+@media screen and (max-width:700px){
+    .ticket-information{
+        width: 100%;
+    }
+}
+
 
 /* ........messages chat_content */
 
@@ -114,6 +120,7 @@ width: 100%;
 background-color: white;
 height: 65px;
 }
+
 
 
 /* upload file container */
