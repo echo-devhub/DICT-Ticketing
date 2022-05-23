@@ -10,33 +10,32 @@ const btnSendTicket = formTicket.querySelector('button[type=submit]');
 
 formTicket.addEventListener('submit', async function (ev) {
     ev.preventDefault();
-
     // console.log(this.elements);
 
-    let res = await fetch('./admin/controllers/ajax_create_ticket.php?create_ticket', {
+    let res = await fetch('./admin/controllers/ajax_create_ticket.php?create_ticket=request', {
         method: 'POST',
         body :new FormData(this)
     });
 
   
-
     if (res.status == 200 && res.statusText == 'OK') {
         
+        let result = await res.json();
 
-        let result = await res.text();
 
-
-        if (result == 'SUCCESS') {
-
+        if (result.valid === true) {
             // btnSendTicket.textContent = 'Please wait...';
             // btnSendTicket.setAttribute('');
 
             CreateTicketResponse('Ticket succesfully created. The system will send you a code that you can used to open your ticket once its approved.', 'info');
-            this.reset();
-            imgPreview.innerHTML = '';
-        } else {
-             CreateTicketResponse(result);
 
+            this.reset();
+
+            imgPreview.innerHTML = '';
+
+            sendEmail(`./admin/controllers/ajax_create_ticket.php?create_ticket=send_email&name=${result.data.name}&email=${result.data.email}&category=${result.data.category}&priority=${result.data.priority}`);
+        } else {
+             CreateTicketResponse(result.data);
         }
 
       
@@ -93,3 +92,12 @@ photo.addEventListener('change', function(){
 
 
 
+
+
+async function sendEmail(url) {
+    let res = await fetch(url);
+
+    if (res.status == 200) {
+        let result = await res.text();
+    }
+}

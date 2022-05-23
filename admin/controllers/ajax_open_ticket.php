@@ -30,6 +30,12 @@ if (!$ticket['agent_id']) {
     return;
 }
 
+// CHECK if ticket is already assign
+if ($ticket['status'] === 'Closed') {
+    echo 'Your ticket is now closed and you cannot open it anymore.';
+    return;
+}
+
 
 session_start();
 

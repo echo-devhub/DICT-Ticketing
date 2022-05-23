@@ -29,23 +29,23 @@
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Customer: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['full_name']; ?></h5 class="text-primary mb-0">
+                            Customer: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['full_name']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
 
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Email: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['email_address']; ?></h5 class="text-primary mb-0">
+                            Email: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['email_address']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Category: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['category']; ?></h5 class="text-primary mb-0">
+                            Category: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['category']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Priority: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['priority']; ?></h5 class="text-primary mb-0">
+                            Priority: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['priority']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
 
@@ -69,17 +69,17 @@
 
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Created on: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at']; ?></h5 class="text-primary mb-0">
+                            Created on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Updated on: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h5 class="text-primary mb-0">
+                            Updated on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Assign To: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo isset($agent_information['last_name']) ? $agent_information['first_name'] . ' ' .  $agent_information['last_name'] : 'No assigned agent';  ?></h5 class="text-primary mb-0">
+                            Assign To: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo isset($agent_information['last_name']) ? $agent_information['first_name'] . ' ' .  $agent_information['last_name'] : 'No assigned agent';  ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">

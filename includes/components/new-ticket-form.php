@@ -2,13 +2,13 @@
     <!-- input name -->
     <div class="field mb-3">
         <label for="name" class="form-label">Your Name</label>
-        <input type="text" name="name" id="name" class="form-control form-control-sm">
+        <input type="text" name="name" id="name" class="form-control">
     </div>
 
     <!-- input email -->
     <div class="field mb-3">
-        <label for="email" class="form-label d-flex align-items-center"><i class="fa-solid fa-inbox icon me-1"></i> Email</label>
-        <input type="text" name="email" id="email" class="form-control form-control-sm" value="">
+        <label for="email" class="form-label d-flex align-items-center"><i class="fa-solid fa-inbox icon sm-icon me-1"></i> Email</label>
+        <input type="text" name="email" id="email" class="form-control" value="">
     </div>
 
     <!-- input subject -->

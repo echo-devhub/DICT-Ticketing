@@ -26,7 +26,7 @@ form.addEventListener('submit', async function (ev) {
 
     const data = new FormData(form);
     
-    let res = await fetch('./controllers/ajax_form_agent.php', {
+    let res = await fetch('./controllers/ajax_form_agent.php?agents=add_agent', {
         method: 'POST',
         body: data
     });
@@ -34,11 +34,18 @@ form.addEventListener('submit', async function (ev) {
     
     if (res.status == 200) {
 
+
+  
         // GET RESPONSE AS PLAIN TEXT
-        let result = await res.text(); 
+        let result = await res.json();
 
+        if (result.valid === true) {
 
-        if (result === 'SUCCESS') {
+            
+        //     result = JSON.parse(result);
+        // console.log(JSON.parse(result));
+        // return;
+
             // DISPLAY SUCCESS MESSAGE
         responseMessage.innerHTML = `<div class="alert alert-success alert-dismissible">New agent successfully added<button class="btn-close" data-bs-dismiss="alert"></button>
         </div>`;   
@@ -48,17 +55,21 @@ form.addEventListener('submit', async function (ev) {
             // REMOVE IMG
             imgContainer.innerHTML = '';
 
+            // REQUEST SEND EMAIL
+            sendEmail(`./controllers/ajax_form_agent.php?agents=send_email&name=${result.data.name}&email=${result.data.email}&pwd=${result.data.pwd}`);
+
             // GET RELOAD USERS RECORD
             let users = await getUsers('./controllers/ajax_retrieve_rows.php?agents');
 
            content.innerHTML = displayHtml(users);
 
+            // REQUEST TO SEND EMAIL TO ALL ADMIN
             return;
         }
 
         // SEND ERROR MESSAGE
         responseMessage.innerHTML = `<div class="alert alert-warning alert-dismissible">
-        ${result}
+        ${result.data}
         <button class="btn-close" data-bs-dismiss="alert"></button>
         </div>`;
     }
@@ -134,3 +145,12 @@ function displayHtml(users) {
 
 }
  
+
+async function sendEmail(url) {
+    let res = await fetch(url);
+
+    if (res.status == 200) {
+        let result = await res.text();
+        console.log(result);
+    }
+}

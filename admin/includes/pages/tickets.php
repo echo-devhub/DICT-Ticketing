@@ -31,6 +31,9 @@
 
          <!-- filter tickets -->
          <div class="ticket_status d-flex justify-content-md-end justify-content-center align-items-center alert flex-wrap container">
+
+             <a href="./tickets.php" class="link_status active_link text-decoration-none p-2 px-3 m-1 status-all shadow text-secondary">Tickets</a>
+
              <?php $tk_statuses = $tickets->get_ticket_statuses(); ?>
 
              <?php if (count($tk_statuses) > 0) : ?>

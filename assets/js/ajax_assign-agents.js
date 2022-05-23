@@ -31,26 +31,27 @@ const formAssignAgent = document.querySelectorAll('.form_assign_agent').forEach(
         ev.preventDefault();
         
 
-
         const formdata = new FormData(this);
 
         formdata.set('ticket_number', ticketNumber);
         formdata.set('ticket_assigner', currentUserId);
 
 
-        let res = await fetch(`./controllers/ajax_assign_agents.php?assign_agents`, {
+        let res = await fetch(`./controllers/ajax_assign_agents.php?assign_agents=request`, {
             method: 'POST',
             body: formdata
         });
 
         if (res.status == 200) {
-            let result = await res.text();
+            let result = await res.json();
 
             // DISPLAY RESPONSE MESSAGE TO USERS
             document.querySelector('#response_message').innerHTML = `<div class="alert alert-info alert-dismissible">
-                Successfully assigned the ticket
+                Please wait and dont take any operations.
                 <button class="btn-close" data-bs-dismiss="alert"></button>
             </div>`;
+
+            sendEmail(`./controllers/ajax_assign_agents.php?assign_agents=send_email&assigner=${result.assigner}&agent_id=${result.agent_id}&ticket_number=${result.ticket_number}`);
 
 
             setTimeout(() => {
@@ -66,6 +67,18 @@ const formAssignAgent = document.querySelectorAll('.form_assign_agent').forEach(
 
 });
 });
+
+
+// SEND EMAIL
+async function sendEmail(url) {
+    let res = await fetch(url);
+
+    if (res.status == 200) {
+        let result = await res.text();
+        // console.log(result);
+    }
+}
+
 
 //  RETRIEVE USERS RECORD
 

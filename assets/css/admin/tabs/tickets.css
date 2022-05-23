@@ -25,6 +25,10 @@
     overflow: hidden;
 }
 
+.status-all {
+    background-color: rgba(39, 37, 37, 0.329);
+}
+
 .status-Open {
     background-color: rgb(246, 67, 109);
 }
