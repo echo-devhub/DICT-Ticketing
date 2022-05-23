@@ -12,13 +12,13 @@
                     <div class="col-md-7 p-3 p-md-0">
                         <div>
                             <h1 class="text-primary display-1">MISS SUPPORT CENTER</h1>
-                            <p>Create and View your ticket and make chats with the agents that supporting you.</p>
+                            <p class="subtitle">Create and View your ticket and make chats with the agents that supporting you.</p>
                         </div>
                     </div>
                     <!-- login form -->
                     <div class="col-md-5">
-                        <div class="card form_container mx-auto border-0 shadow-sm">
-                            <div class="card-body">
+                        <div class="card form_container mx-auto border-0 shadow-lg">
+                            <div class=" card-body">
                                 <h3 class="text-center mb-5">Open Ticket <i class="fa-solid fa-circle-check text-primary"></i></h3>
                                 <!-- open ticket form -->
                                 <?php include __DIR__ . '/../components/open-ticket-form.php'; ?>
@@ -36,7 +36,7 @@
                 <!-- form container -->
                 <div class="col-md my-3 order-md-0 order-1">
                     <!-- form -->
-                    <div class="card form_container mx-auto border-0">
+                    <div class="card form_container mx-auto border-0 shadow-lg">
 
                         <div class="card-body">
                             <h3 class="text-center mb-5">Sign in <i class="fa-solid fa-circle-check text-primary"></i></h3>
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-      
+
 
         <!-- footer -->
         <footer class="app_footer d-flex align-items-center p-4">

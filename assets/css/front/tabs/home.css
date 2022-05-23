@@ -1,7 +1,14 @@
+
+
 .introduction,.signin{
     min-height: 550px;
 }
 
+
+/* subtitle after big text */
+.introduction .subtitle{
+max-width: 350px;
+}
 
 .img-select{
     bottom: 3%;
@@ -17,3 +24,5 @@
     max-width: 200px;
     margin: auto;
 }
+
+

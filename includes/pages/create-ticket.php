@@ -17,7 +17,7 @@
          <!-- form container -->
          <div class="col-md my-3">
              <!-- form -->
-             <div class="card form_container mx-auto border-0">
+             <div class="card form_container mx-auto border-0 shadow-lg">
 
                  <div class="card-body">
                      <h3 class="text-center mb-5">New Ticket <i class="fa-solid fa-circle-check text-primary"></i></h3>

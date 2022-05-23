@@ -15,6 +15,18 @@
     top: -50%;
     left: -30%;
 }
+.visual-effect::before{
+    content: '';
+    position: inherit;
+    width: 570px;
+    height: 570px;
+    background: linear-gradient(50deg, rgba(245, 245, 124, 0.281), rgba(0, 0, 255, 0.205), rgba(255, 151, 151, 0.185));
+    left: 35%;
+    bottom: -100%;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+}
+
 
 /* visual effects for creating a ticket */
 .create-ticket .visual-effect {
