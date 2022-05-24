@@ -5,7 +5,7 @@
     <!-- input email -->
     <div class="field mb-3">
         <label for="signin_email" class="form-label d-flex align-items-center">
-            <i class="fa-solid fa-inbox icon sm-icon me-2"></i> Email
+            <i class="fa-solid fa-at icon sm-icon me-1 fa-lg text-secondarys"></i> Email Address
         </label>
         <input type="text" name="signin_email" id="signin_email" class="form-control">
     </div>
@@ -13,9 +13,9 @@
     <!-- input name -->
     <div class="field mb-3">
         <label for="signin_pwd" class="form-label d-flex align-items-center">
-            <i class="fa-solid fa-lock icon sm-icon me-2"></i> Password
+            <code class="fs-5">Enter your Password</code>
         </label>
-        <input type="text" name="signin_pwd" id="signin_pwd" class="form-control">
+        <input type="password" name="signin_pwd" id="signin_pwd" class="form-control">
     </div>
 
 

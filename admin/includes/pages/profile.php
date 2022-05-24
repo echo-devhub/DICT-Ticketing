@@ -113,7 +113,9 @@
                                             <td><?php echo $ticket['create_at']; ?></td>
                                             <td><?php echo $ticket['updated_at']; ?></td>
 
-                                            <td><?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?></td>
+                                            <td>
+                                                <small class="statusText-<?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?>"><?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?></small>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

@@ -39,7 +39,7 @@ if (isset($_REQUEST['chats'])) {
 
     else :
         $output .= '<div class="alert">
-    <h1 class="display-6 text-center text-secondary">No conversation <i class="fa-solid fa-comment-dots text-primary"></i></h1>
+    <h1 class="display-6 text-center text-secondary">No conversation <i class="fa-solid fa-comment-dots"></i></h1>
 </div>';
 
 

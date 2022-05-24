@@ -1,46 +1,69 @@
 /* ...tickets */
 
 /* filter links */
-.ticket_status>.link_status {
-    border-radius: 16px;
-    color: white;
+.ticket_status > .link_status {
+  border-radius: 16px;
+  color: white;
 }
 
 /* add bg to active state */
 .link_status.active_link {
-    background-color: white;
+  background-color: white;
 }
 
 /* tables action links */
 .table .table_action_link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-#modal_agent_list .avatar{
-   width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    overflow: hidden;
+#modal_agent_list .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .status-all {
-    background-color: rgba(39, 37, 37, 0.329);
+  background-color: rgba(39, 37, 37, 0.329);
 }
 
 .status-Open {
-    background-color: rgb(246, 67, 109);
+  background-color: rgb(246, 67, 109);
 }
 
 .status-Pending {
-    background-color: rgb(54, 162, 235);
+  background-color: rgb(54, 162, 235);
 }
 
 .status-Resolved {
-    background-color: rgb(49, 182, 80);
+  background-color: rgb(49, 182, 80);
 }
 
 .status-Closed {
+  background-color: rgb(90, 96, 100);
+}
+
+
+[class*="statusText"]{
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+.statusText-Open {
+    background-color: rgb(246, 67, 109);
+}
+
+.statusText-Pending {
+    background-color: rgb(54, 162, 235);
+}
+
+.statusText-Resolved {
+    background-color: rgb(49, 182, 80);
+}
+
+.statusText-Closed {
     background-color: rgb(90, 96, 100);
 }

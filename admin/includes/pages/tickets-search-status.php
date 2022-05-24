@@ -50,14 +50,16 @@
 
                                     <?php else : ?>
                                         <a href="#modal_agent_list" data-bs-toggle="modal" class="text-decoration-none btn_show_agent_list" data-ticketnumber="<?php echo $ticket['ticket_number']; ?>">
-                                            <i class="fa-solid fa-address-book icon fa-lg text-primary"></i>
+                                            <i class="fa-solid fa-users icon sm-icon text-dark bg-warning"></i>
                                         </a>
                                     <?php endif; ?>
                                 </td>
 
                             <?php endif; ?>
 
-                            <td><?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?></td>
+                            <td>
+                                <small class="statusText-<?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?>"><?php echo $tickets->col_real_value('status_id', $ticket['status_id'], 'status', 'ticket_statuses'); ?></small>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

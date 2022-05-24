@@ -7,7 +7,7 @@
 
     <!-- input email -->
     <div class="field mb-3">
-        <label for="email" class="form-label d-flex align-items-center"><i class="fa-solid fa-inbox icon sm-icon me-1"></i> Email</label>
+        <label for="email" class="form-label d-flex align-items-center"><i class="fa-solid fa-at icon sm-icon me-1 fa-lg text-secondarys"></i> Email Address</label>
         <input type="text" name="email" id="email" class="form-control" value="">
     </div>
 
@@ -38,7 +38,7 @@
     <!-- text area | description -->
     <div class="field mb-3 textarea position-relative">
         <label for="description" class="form-label">Describe your issue</label>
-        <textarea name="description" id="description" cols="30" rows="8" class="form-control"><?php echo $ticket->get_input('name'); ?></textarea>
+        <textarea name="description" id="description" cols="30" rows="8" class="form-control" placeholder="..."><?php echo $ticket->get_input('name'); ?></textarea>
 
         <label for="photo" class="img-select icon position-absolute">
             <input type="file" name="photo" id="photo">

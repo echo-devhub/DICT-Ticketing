@@ -12,7 +12,7 @@
     <!-- app nav -->
     <nav class="app_navigation nav nav-pills flex-column flex-md-row align-items-md-center">
         <!-- <a href="#" class="nav-link">ICT Equipment</a> -->
-        <a href="./index.php?source=home" class="nav-link link-secondary <?php echo $active == 'home' ? 'active_link' : ''; ?>"><i class="fa-solid fa-house"></i></a>
+        <a href="./index.php?source=home" class="nav-link link-secondary <?php echo $active == 'home' ? 'active_link' : ''; ?>"><i class="fa-solid fa-house fa-lg"></i></a>
         <a href="./create-new-ticket.php?source=new-ticket" class="nav-link link-secondary <?php echo $active == 'new-ticket' ? 'active_link' : ''; ?>">New Ticket</a>
     </nav>
 

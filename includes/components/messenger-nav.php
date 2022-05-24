@@ -30,25 +30,25 @@
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Agent: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $has_agent ? $agent_information['first_name'] . ' ' . $agent_information['last_name'] :  ''; ?></h5 class="text-primary mb-0">
+                            Agent: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $has_agent ? $agent_information['first_name'] . ' ' . $agent_information['last_name'] :  ''; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
 
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Email: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $has_agent ? $agent_information['email_address'] : ''; ?></h5 class="text-primary mb-0">
+                            Email: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $has_agent ? $agent_information['email_address'] : ''; ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Category: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['category'];
-                                                                                            ?></h5 class="text-primary mb-0">
+                            Category: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['category'];
+                                                                                            ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">
-                            Priority: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['priority'];
-                                                                                            ?></h5 class="text-primary mb-0">
+                            Priority: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['priority'];
+                                                                                            ?></h6 class="text-primary mb-0">
                         </div>
                     </li>
 
@@ -75,19 +75,19 @@
 
                 <li class="list-group-item">
                     <div class="d-flex justify-content-between align-items-center">
-                        Created on: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at'];
-                                                                                        ?></h5 class="text-primary mb-0">
+                        Created on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at'];
+                                                                                        ?></h6 class="text-primary mb-0">
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex justify-content-between align-items-center">
-                        Updated on: <h5 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h5 class="text-primary mb-0">
+                        Updated on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h6 class="text-primary mb-0">
                     </div>
                 </li>
 
                 <li class="list-group-item">
                     <div class="d-flex align-items-center justify-content-between">
-                        Status: <h5 class="mb-0 text-info"><?php echo $ticket_information['status']; ?></h5>
+                        Status: <h6 class="mb-0 text-info"><?php echo $ticket_information['status']; ?></h6>
                     </div>
                 </li>
 

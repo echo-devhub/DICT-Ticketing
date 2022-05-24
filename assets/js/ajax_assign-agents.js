@@ -124,7 +124,7 @@ async function sendEmail(url) {
         <form class="form_assign_agent">
             <input type="hidden" name="agent_id" value="${user.agent_id}">
             <button class="btn btn-light" type="submit">
-                <i class="fa-solid fa-square-check icon text-success fa-lg"></i>
+                <i class="fa-solid fa-square-check icon sm-icon text-success fa-lg"></i>
             </button>
         </form>
     </div>
