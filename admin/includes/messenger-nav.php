@@ -20,7 +20,7 @@
             </div>
 
             <!-- list of notifications -->
-            <div class="dropdown-menu border-0 shadow-lg p-2">
+            <div class="dropdown-menu border-0 shadow-lg p-2" id="ticket-info">
                 <ul class="list-group list-group-flush p-0 ticket-information p-3">
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between align-items-center">

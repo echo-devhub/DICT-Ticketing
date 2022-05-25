@@ -26,7 +26,8 @@ class Messenger extends Database
 
     public function get_chats($ticket_number, $sender_id, $reciever_id)
     {
-        $sql = "SELECT * FROM chats WHERE ticket_number = :ticket_number AND sender_id = :sender_id AND reciever_id = :reciever_id OR reciever_id = :sender_id AND sender_id = :reciever_id";
+
+        $sql = "SELECT c.* FROM chats c JOIN agents a WHERE c.ticket_number = :ticket_number AND c.sender_id = :sender_id AND c.reciever_id = :reciever_id OR c.reciever_id = :sender_id AND c.sender_id = :reciever_id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([':ticket_number' => $ticket_number, ':sender_id' => $sender_id, ':reciever_id' => $reciever_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

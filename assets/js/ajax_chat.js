@@ -28,12 +28,37 @@ inputFile.addEventListener('change', function () {
 
     reader.addEventListener('load', function () {
 
-        let div = document.createElement('div');
+        const div = document.createElement('div');
         div.classList.add('img_preview', 'position-absolute');
         const img = document.createElement('img');
         img.src = reader.result;
         div.appendChild(img);
+
+
+        const closePreviewBtn = document.createElement('div');
+        closePreviewBtn.classList.add('close-preview', 'icon');
+        closePreviewBtn.innerHTML = '<i class="fa-solid fa-xmark fa-2x"></i>'; // icon
+
+        closePreviewBtn.addEventListener('click', function () {
+            div.remove(); 
+            // inputFile.files[0] = null;
+
+            // REMOVE IMAGE AND PREVENT FROM SENDING
+            formSendMessage.msg_img.value = null;
+            disableBtn(inputText);
+            
+        });
+
+        div.appendChild(closePreviewBtn);
+
         chat_form.appendChild(div);
+
+
+        
+        // ENABLE BTN SUBMIT
+          btnSend.classList.add('bg-primary')
+        btnSend.classList.remove('bg-secondary')
+    btnSend.removeAttribute('disabled');
 
     });
 });
@@ -48,10 +73,12 @@ function disableBtn(inputText) {
 }
 }
 
+
+
 disableBtn(inputText);
 
 inputText.addEventListener('keyup', function () {
-    if (this.value) {
+    if (this.value || chat_form.querySelector('.img_preview')) {
         btnSend.classList.add('bg-primary')
         btnSend.classList.remove('bg-secondary')
     btnSend.removeAttribute('disabled');
@@ -164,4 +191,34 @@ async function list_of_customer(ticketNumber, sender, reciever){
 
 setInterval(function () {
 list_of_customer(ticketNumber.value, senderId.value, recieverId.value);
+
 },1000);
+
+
+// ADD PREVIEW IMAGE FUNCTIONALITY
+
+function showImage(imgContainer) {
+    
+    const previewer = document.createElement('div');
+    previewer.classList.add('img-previewer');
+
+
+    const imgToView = imgContainer.firstElementChild;
+    imgToView.classList.add('img');
+    previewer.appendChild(imgToView);
+
+    // close btn previwer
+    const closePreviewerBtn = document.createElement('div');
+    closePreviewerBtn.classList.add('img-previewer-closeBtn', 'icon', 'icon-sm');
+    closePreviewerBtn.innerHTML = `<i class="fa-solid fa-xmark fa-2x"></i>`;
+
+    closePreviewerBtn.addEventListener('click', () => {
+        previewer.remove();
+    });
+
+
+    previewer.appendChild(closePreviewerBtn);
+
+    document.body.appendChild(previewer);
+}
+
