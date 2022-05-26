@@ -56,53 +56,57 @@
                         </div>
                     </li>
 
-                    <?php if (!empty($ticket_information['photo'])) : ?>
-                        <li class="list-group-item">
-                            <div class="d-flex flex-column">
-                                <h4 class="text-center alert">Photo/Screenshot</h4>
-                                <div class="tk-img">
-                                    <img src="../assets/media/photos/tickets/<?php echo $ticket_information['photo'] ?>" alt="">
-                                </div>
-                            </div>
-                        </li>
-                    <?php endif; ?>
 
-                    <li class="list-group-item">
-                        <div class="d-flex justify-content-between align-items-center">
-                            Created on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at']; ?></h6 class="text-primary mb-0">
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="d-flex justify-content-between align-items-center">
-                            Updated on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h6 class="text-primary mb-0">
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="d-flex justify-content-between align-items-center">
-                            Assign To: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo isset($agent_information['last_name']) ? $agent_information['first_name'] . ' ' .  $agent_information['last_name'] : 'No assigned agent';  ?></h6 class="text-primary mb-0">
-                        </div>
-                    </li>
                     <li class="list-group-item">
                         <div class="d-flex flex-column">
-                            <h5 class="mb-3 text-info">Status</h5>
-
-                            <form action="" method="post">
-
-                                <?php foreach ($ticket->get_ticket_statuses() as $status) :  ?>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="radio" name="status" id="<?php echo $status['status']; ?>" <?php echo $ticket_information['status'] == $status['status'] ? 'checked' : '';  ?> value="<?php echo $status['status_id']; ?>">
-                                        <label class="form-check-label" for="<?php echo $status['status']; ?>">
-                                            <?php echo $status['status']; ?>
-                                        </label>
-                                    </div>
-                                <?php endforeach; ?>
-
-                                <div class="field d-grid">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                            <h4 class="text-center alert">Photo/Screenshot</h4>
+                            <?php if (!empty($ticket_information['photo'])) : ?>
+                                <div class="tk-img">
+                                    <img src="../../assets/media/photos/tickets/<?php echo $ticket_information['photo'] ?>" alt="">
                                 </div>
-                            </form>
                         </div>
                     </li>
+
+
+                <?php else :  ?>
+                    <div class="alert alert-primary border-0">No photo/Screenshot included</div>
+                <?php endif; ?>
+
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        Created on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['create_at']; ?></h6 class="text-primary mb-0">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        Updated on: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo $ticket_information['updated_at']; ?></h6 class="text-primary mb-0">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        Assign To: <h6 class="text-primary mb-0" class="fw-bold ms-5"><?php echo isset($agent_information['last_name']) ? $agent_information['first_name'] . ' ' .  $agent_information['last_name'] : 'No assigned agent';  ?></h6 class="text-primary mb-0">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex flex-column">
+                        <h5 class="mb-3 text-info">Status</h5>
+
+                        <form action="" method="post">
+                            <?php foreach ($ticket->get_ticket_statuses() as $status) :  ?>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" name="status" id="<?php echo $status['status']; ?>" <?php echo $ticket_information['status'] == $status['status'] ? 'checked' : '';  ?> value="<?php echo $status['status_id']; ?>">
+                                    <label class="form-check-label" for="<?php echo $status['status']; ?>">
+                                        <?php echo $status['status']; ?>
+                                    </label>
+                                </div>
+                            <?php endforeach; ?>
+
+                            <div class="field d-grid">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </li>
 
                 </ul>
             </div>

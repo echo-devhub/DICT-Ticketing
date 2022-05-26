@@ -41,7 +41,7 @@
         <textarea name="description" id="description" cols="30" rows="8" class="form-control" placeholder="..."><?php echo $ticket->get_input('name'); ?></textarea>
 
         <label for="photo" class="img-select icon position-absolute">
-            <input type="file" name="photo" id="photo">
+            <input type="file" name="photo" id="photo" accept="image/*">
             <i class="fa-solid fa-image position-absolute fa-lg"></i>
         </label>
 

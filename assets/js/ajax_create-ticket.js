@@ -68,7 +68,15 @@ photo.addEventListener('change', function(){
     reader.addEventListener('load', function () {
 
 
-        imgPreview.innerHTML = `<img src="${this.result}" alt="">`;
+        imgPreview.innerHTML = `
+        <div class="close-preview position-absolute"><i class="fa-solid fa-xmark icon fa-2x"></i></div>
+        <img src="${this.result}" alt="">
+        `;
+
+        document.querySelector('.close-preview').addEventListener('click', function () {
+            photo.value = null;
+            imgPreview.innerHTML = '';
+        });
 
         // <div class="position-relative">
         // <span class="img-close position-absolute"><i class="fa-solid fa-xmark"></i></span>

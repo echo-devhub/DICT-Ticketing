@@ -19,6 +19,9 @@ $ticket_information = $ticket->ticket_information($tknumber);
 $agent_information = $agent->get_agent_by_id($ticket_information['agent_id']);
 
 
+// echo '<pre>';
+// print_r(($ticket_information));
+// echo '</pre>';
 
 
 $users_assigned_tickets = $ticket->users_assigned_tickets($ticket_information['agent_id']);

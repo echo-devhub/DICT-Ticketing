@@ -13,7 +13,7 @@
 
             <!-- photo icon -->
             <div class="upload-file position-absolute d-flex justify-content-center align-items-center">
-                <input type="file" name="msg_img" id="msg_img" <?php echo $ticket_information['status'] == 'Resolved' ? 'disabled' : ''; ?>>
+                <input type="file" name="msg_img" id="msg_img" <?php echo $ticket_information['status'] == 'Resolved' ? 'disabled' : ''; ?> accept="image/*">
                 <i class="fa-solid fa-image fa-lg text-secondary"></i>
             </div>
 

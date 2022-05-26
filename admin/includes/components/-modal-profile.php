@@ -52,7 +52,7 @@
                 <form method="post" id="form_change_photo">
                     <div class="field mb-3">
                         <label for="photo" class="form-label d-flex justify-content-center align-items-center"><i class="fa-solid fa-image icon bg-primary text-white"></i></label>
-                        <input type="file" name="photo" id="photo" class="form-control d-none">
+                        <input type="file" name="photo" id="photo" class="form-control d-none" accept="image/*">
                     </div>
 
                     <div class="img_preview mb-5"></div>

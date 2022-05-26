@@ -107,10 +107,11 @@ if (isset($_REQUEST['customers'])) {
 
 
 
-    $all_tickets =  $logUser->is_admin() ? $tickets->all_tickets()
-        : $users_assigned_tickets;
+    $all_tickets =  $users_assigned_tickets;
 
     foreach ($all_tickets as $ticket) {
+
+        // GET LAST CHATS
         $last_chat = $messenger->get_last_chat($ticket['ticket_number'], $ticket['agent_id'], $ticket['customer_id']);
 
         $output_last_msg = '';
@@ -129,15 +130,17 @@ if (isset($_REQUEST['customers'])) {
 
         $output_last_msg = strlen($output_last_msg) <= 27 ? $output_last_msg : substr($output_last_msg, 0, 28) . '...';
 
-        if ($ticket_number === $ticket['ticket_number']) {
-            $output .= '<a href="?tknumber=' . $ticket['ticket_number'] . '" class="border-0 d-flex flex-column list-group-item list-group-item-action ' . ($ticket_number == $ticket['ticket_number'] ? 'active_link' : '') . '">
-            <h6 class="fs-5 text-primary"><span> ' . $tickets->col_real_value('customer_id', $reciever, 'full_name', 'customers') . '</span></h6>
+        // if ($ticket_number === $ticket['ticket_number']) {
+        $output .= '<a href="?tknumber=' . $ticket['ticket_number'] . '" class="border-0 d-flex flex-column list-group-item list-group-item-action ' . ($ticket_number == $ticket['ticket_number'] ? 'active_link' : '') . '">
+            <h6 class="fs-5 text-primary"><span> ' . $tickets->col_real_value('customer_id', $ticket['customer_id'], 'full_name', 'customers') . '</span></h6>
             <small class="mb-0 fw-bold">' . $output_last_msg . '</small>
-            <small class="date fw-normal">' . date('l, F d, Y', strtotime($ticket['create_at'])) . '</small>
+            <small class="date fw-normal">' . (!is_array($last_chat) ? '' : date('l, F d, Y', strtotime($last_chat['send_date'])))  . '</small>
         </a>';
-        }
+        // }
     }
 
+
+    // date('l, F d, Y', strtotime($last_chat['send_date']))
 
 
     echo $output;

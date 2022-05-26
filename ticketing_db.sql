@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2022 at 02:37 AM
+-- Generation Time: May 26, 2022 at 08:34 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -44,8 +44,7 @@ CREATE TABLE `agents` (
 --
 
 INSERT INTO `agents` (`agent_id`, `first_name`, `last_name`, `email_address`, `user_role`, `photo`, `pwd`, `is_active`, `joined_at`) VALUES
-(45, 'Jericko', 'Rubio', 'jerickorubiodev@gmail.com', 'Administrator', 'DICT_6289deb271d3c5.21009728.jpg', 'jerickorubiodev', 0, '2022-05-21 15:02:42'),
-(62, 'Jericko', 'Rubio', 'jerickorubioOfficial@gmail.com', 'Agent', 'DICT_628b2c9d178915.37530143.jpg', '90hj9nUH', 0, '2022-05-22 19:41:33');
+(64, 'Admin', 'Admin', 'dictregion4b@gmail.com', 'Administrator', 'DICT_628fc7d116d3b5.03845611.jpg', '123456789', 1, '2022-05-26 07:30:58');
 
 -- --------------------------------------------------------
 
@@ -76,14 +75,6 @@ CREATE TABLE `customers` (
   `email_address` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `customers`
---
-
-INSERT INTO `customers` (`customer_id`, `full_name`, `email_address`) VALUES
-(70, 'Jericko Rubio', 'jerickorubiodev@gmail.com'),
-(71, 'John doe canada', 'jerickorubioOfficial@gmail.com');
-
 -- --------------------------------------------------------
 
 --
@@ -104,14 +95,6 @@ CREATE TABLE `tickets` (
   `priority_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tickets`
---
-
-INSERT INTO `tickets` (`ticket_id`, `ticket_number`, `category_id`, `description`, `photo`, `status_id`, `create_at`, `updated_at`, `customer_id`, `agent_id`, `priority_id`) VALUES
-(63, '251633', 18, 'Please help me with my Computer.', '0', 4, '2022-05-22 19:54:44', '2022-05-22 22:48:09', 70, 62, 2),
-(64, '503133', 19, 'dadasd', '0', 1, '2022-05-22 23:12:44', NULL, 71, NULL, 3);
-
 -- --------------------------------------------------------
 
 --
@@ -128,7 +111,6 @@ CREATE TABLE `ticket_categories` (
 --
 
 INSERT INTO `ticket_categories` (`category_id`, `category`) VALUES
-(15, 'Hardware'),
 (17, 'Software'),
 (18, 'Maintenances'),
 (19, 'Wirings'),
@@ -237,25 +219,25 @@ ALTER TABLE `ticket_statuses`
 -- AUTO_INCREMENT for table `agents`
 --
 ALTER TABLE `agents`
-  MODIFY `agent_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `agent_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `chats`
 --
 ALTER TABLE `chats`
-  MODIFY `chat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=332;
+  MODIFY `chat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=396;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `ticket_categories`

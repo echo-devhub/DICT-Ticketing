@@ -69,6 +69,8 @@
                                     </div>
                             </div>
                         </li>
+
+
                     <?php else :  ?>
                         <div class="alert alert-primary border-0">No photo/Screenshot included</div>
                     <?php endif; ?>
