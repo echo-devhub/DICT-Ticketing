@@ -9,8 +9,7 @@
              <div class="help_text">
                  <h1 class="display-6 fw-bolder text-secondary">Create New Ticket <i class="fa-solid fa-ticket-simple"></i></h1>
                  <hr>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ipsa earum suscipit ad blanditiis a tempora at Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint obcaecati, tempore impedit iste consectetur accusantium voluptatum accusamus repellendus aut ipsum!
-                     culpa, libero dolore. </p>
+                 <p>After you had created a new ticket, the system will notify you once there was a corresponding agent assigned to your issue. And your provided email will used as a notification delivery system.</p>
              </div>
          </div>
 
