@@ -1,4 +1,7 @@
-<?php include __DIR__ . '/init.php'; ?>
+<?php include __DIR__ . '/init.php';
+
+define('PAGE_TITLE', 'Agents');
+?>
 
 <?php include APP_ADMIN_INCLUDE . '/header.php'; ?>
 

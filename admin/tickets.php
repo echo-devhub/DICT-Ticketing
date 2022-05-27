@@ -1,4 +1,8 @@
-<?php include __DIR__ . '/init.php'; ?>
+<?php include __DIR__ . '/init.php';
+
+
+define('PAGE_TITLE', 'Tickets');
+?>
 
 <?php include APP_ADMIN_INCLUDE_CONTROLLER . '/tickets.php'; ?>
 

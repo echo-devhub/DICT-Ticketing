@@ -1,4 +1,7 @@
-<?php include __DIR__ . '/config/app.php'; ?>
+<?php include __DIR__ . '/config/app.php';
+
+define('PAGE_TITLE', 'Home');
+?>
 
 
 <?php include APP_INCLUDE_CONTROLLER . '/index.php'; ?>
