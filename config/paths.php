@@ -36,11 +36,10 @@ define('APP_URL', isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on') ? 'htt
 
 
 #styles
-define('APP_ASSET_BOOTSTRAP', APP_URL . '/ticketing/assets/bootstrap');
+
 define('APP_ASSET_CSS', APP_URL . '/ticketing/assets/css');
 define('APP_ASSET_JS', APP_URL . '/ticketing/assets/js');
 define('APP_ASSET_FONT', APP_URL . '/ticketing/assets/fonts');
-define('APP_ASSET_ICON', APP_URL . '/ticketing/assets/fontawesome');
 
 #photos
 define('APP_ASSET_PHOTO_BUILT', APP_URL . '/ticketing/assets/media/photos/built_in');

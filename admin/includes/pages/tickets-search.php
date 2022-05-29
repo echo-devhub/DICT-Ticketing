@@ -67,7 +67,7 @@
             </table>
 
         <?php else : ?>
-            <div class="alert alert-info d-flex align-items-center mx-2">No tickets found <code class="fs-4 ms-2"><?php echo $term; ?></code></div>
+            <div class="alert alert-info d-flex align-items-center mx-2">No tickets found for <code class="fs-4 ms-2"><?php echo $term; ?></code></div>
         <?php endif; ?>
     </div>
 
